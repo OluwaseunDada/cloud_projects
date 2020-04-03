@@ -7,7 +7,7 @@ def list_per_subdir(bucket, subfolder_name):
    blobs = list(bucket.list_blobs(prefix=subfolder_name)) # sys.argv[2] == subfolder_name
    
    if subfolder_name == None:
-       print("\n###### below are the contents of the " +  bucket.name + " bucket:\n")
+       print("\n###### below are the contents of the gs://" +  bucket.name + " bucket:\n")
    else:
        print("\n###### below are the contents of the sub-folder gs://" + bucket.name + "/" +  subfolder_name  + " \n")
    for b in blobs:
